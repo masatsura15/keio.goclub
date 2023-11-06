@@ -1,0 +1,38 @@
+<%= link_to "ログイン", tweets_path %>
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<%= link_to "新規登録", new_user_registration_path %>
+<h1>自分の題名</h1>
+<h3>一覧ページ</h3>
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
+<%= link_to "新規投稿へ", new_tweet_path %>
+<% end %>
+<% end %>
+
+<%= link_to "個人戦", "/posts/kojin" %>
+<%= link_to "団体戦", "/posts/dantai" %>
+<%= link_to "その他のイベント", "/posts/event" %>
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+    <div class="tweet">
+    <%= t.user.email %>
+      <%= t.name %>
+      <%= t.title %>
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <%= t.about %>
+      <%= t.goal %>
+      <% if user_signed_in? %>
+  <% if current_user == t.user.id || current_user.admin? %>
+      <%= link_to "編集する", tweet_path(t.id) %>
+      <% end %>
+      <% end %>
+
+      <% if user_signed_in? %>
+  <% if current_user == t.user.id || current_user.admin? %>
+      <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+      <% end %>
+      <% end %>
+
+    </div>
+  <% end %>
+</div>

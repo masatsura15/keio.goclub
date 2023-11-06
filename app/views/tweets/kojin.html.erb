@@ -1,0 +1,15 @@
+<h1>個人戦</h1>
+<% @tweets.each do |t| %>
+    <% if t.category == "kojin" %>  #ここがポイント！ categoryカラムにdogと格納されているものだけを表示している！
+    <div class="tweet">
+    <%= t.name %>
+    <%= t.title %>
+    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+    <%= t.about %>
+    <%= t.goal %>
+
+
+    <% end %>
+  <% end %>
+
+  <%= link_to "一覧に戻る", tweets_path %>
