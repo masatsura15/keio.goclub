@@ -13,7 +13,7 @@
 <%= link_to "団体戦", "/posts/dantai" %>
 <%= link_to "その他のイベント", "/posts/event" %>
 <div class="tweets-container">
-  <% @tweets.each do |t| %>
+  <%= @tweets.each do |t| %>
     <div class="tweet">
     <%= t.user.email %>
       <%= t.name %>
