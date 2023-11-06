@@ -9,7 +9,7 @@ class CreateTweets < ActiveRecord::Migration[6.1]
       t.string :category
       t.string :image
       t.integer :user_id
-      t.boolean :admin
+      
       t.timestamps
     end
   end
