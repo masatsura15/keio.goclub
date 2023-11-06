@@ -8,6 +8,5 @@
 
 User.create!(email: "admin@a",
              password:  "111111",
-             password_confirmation: "111111",
-             admin: "true")
+             password_confirmation: "111111")
 
