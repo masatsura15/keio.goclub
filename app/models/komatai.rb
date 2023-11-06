@@ -1,0 +1,2 @@
+class Komatai < ApplicationRecord
+end
