@@ -22,13 +22,13 @@
       <%= t.about %>
       <%= t.goal %>
       <% if user_signed_in? %>
-  <% if current_user == t.user.id || current_user.admin? %>
+  <% if current_user == t.user.id || current_user.email == "admin@c" %>
       <%= link_to "編集する", tweet_path(t.id) %>
       <% end %>
       <% end %>
 
       <% if user_signed_in? %>
-  <% if current_user == t.user.id || current_user.admin? %>
+  <% if current_user == t.user.id || current_user.email == "admin@c" %>
       <%= button_to "削除する", tweet_path(t.id), method: :delete %>
       <% end %>
       <% end %>
