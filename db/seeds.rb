@@ -8,5 +8,5 @@
 
 User.create(email: "admin@c",
              password:  "111111",
-             admin: true)
+             admin: "true")
 
