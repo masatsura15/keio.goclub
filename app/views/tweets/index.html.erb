@@ -4,7 +4,7 @@
 <h1>自分の題名</h1>
 <h3>一覧ページ</h3>
 <% if user_signed_in? %>
-  <% if current_user.admin? %>
+  <% if current_user.admin %>
 <%= link_to "新規投稿へ", new_tweet_path %>
 <% end %>
 <% end %>
