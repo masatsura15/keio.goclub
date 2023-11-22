@@ -1,0 +1,101 @@
+<div class="title">
+<h2>お知らせ</h2>
+</div>
+
+<div class="article">
+<% @tweets.each do |t| %>
+    <% if t.category == "overview" %> 
+    <h2>
+    <a class="linkcolor">
+
+    <ul>  
+    <li>
+    <%= link_to tweet_path(t.id) do %>
+    <%= t.name %>
+    <%= t.goal %>
+    </a>
+
+    </h2>
+    <% end %>    </li>
+     <% end %>
+     </ul>
+  <% end %>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="activity">
+  <div class="overviewtext"><h1>部室</h1></div>
+  <div><h1><<塾生会館　３F　３１５号室>></h1></div>
+
+  <div class="bushitsu">
+   
+   <div class="map"> <%= image_tag"map.jpg", size: "350x300" %> </div>
+   <div><%= image_tag"door.jpg", size: "250x300" %></div>
+   <div><%= image_tag"club_room.jpg", size: "300x300" %></div>
+ </div>
+ <br>
+ </div>
+ 
+ <div class="activity">
+  <div class="overviewtext">
+   <div><h1>練習会</h1></div>
+  </div>
+  <div><h2>週に１～２回練習会を開催している</h2></div>
+ 
+ <div class="practice">
+ 
+  <div class="okura">
+   <a href="https://theokuratokyo.jp/experience/#gosalon"><h2>ホテルオークラ　囲碁サロン</h2></a>
+  </div>
+
+  <div class="first">
+   <a href="http://iidabashiigo.ikidane.com/"><h2>碁会所囲碁ファースト飯田橋</h2></a>
+  </div>
+ </div>
+
+ <div class="practice1">
+  <div><%= image_tag"gosalon.jpg", size: "500x300" %></div>
+
+  <div><%= image_tag"first.jpg", size: "500x300" %></div>
+
+  </div>
+
+ </div>
+ 
+ </div>
+
+
+ <div class="activity0">
+ <div class="overviewtext0">
+  <div><h1>部誌～石の音～</h1></div>
+ </div>
+ <div class="magazine0">
+    <div class="magazine"><%= image_tag"magazine.jpg", size: "300x300" %></div>
+    <div class="overtext"><h2>
+    部員が大会で打った後の棋譜及びその解説や新入部員・卒業する部員が
+    <br>
+    寄稿したフリーテーマがまとめられている。
+    <br>
+    石の音係によって編集され、半年に一回出版・配布される。
+    <br>
+    題字は二十二世本因坊秀格（高川格　九段）
+    </h2>   </div>
+    </div>
+   </div>
+ </div>
+
+<div class="SNS0">
+<div class="overviewtext"><h1>団体規約</h1></div>
+<div class="content">
+  <ul class="scroll_lists">
+  <li><%= image_tag"rules1.jpg", size: "800x880" %></li>
+  <li><%= image_tag"rules2.jpg", size: "800x1000" %></li>
+  <li><%= image_tag"rules3.jpg", size: "800x1000" %></li>
+  </ul>
+</div>
+
+</div>

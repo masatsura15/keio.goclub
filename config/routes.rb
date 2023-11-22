@@ -4,9 +4,11 @@ Rails.application.routes.draw do
 
 resources :tweets
 
+  get 'posts/overview' => 'tweets#overview'
   get 'posts/kojin' => 'tweets#kojin'
   get 'posts/dantai' => 'tweets#dantai'
   get 'posts/event' => 'tweets#event'
+  get 'posts/infomation' => 'tweets#infomation'
   
   root 'tweets#index'
 

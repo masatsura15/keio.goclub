@@ -1,1 +1,18 @@
-<%= link_to "編集する", edit_tweet_path(@tweet.id) %>
+<div class="viewpage">
+<h1><%= @tweets.name %></h1>
+<h2><%= @tweets.goal %></h2>
+<h3><%= @tweets.title %></h3>
+<div class="image1">
+
+<div class="dummy">
+    <p><h3><%= @tweets.about %></h3></p>
+    </div>
+<div class="image">
+    <%= image_tag @tweets.image_url, size: "550x500" if @tweets.image? %>
+</div>
+</div>
+
+</div>
+
+
+

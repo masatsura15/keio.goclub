@@ -1,16 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>Masatsura</title>
+  <meta charset="utf-8">  
+  <title>Masatsura</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="./stylesheets/index.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+  <header>
+  <%= link_to tweets_path do %>
+    <h1>慶應義塾大学囲碁部</h1>
+  <% end %>
+  </header>
+  
+  
+   
+    
+  <div class="masa">
+   <div class="masa2">
+    <%= link_to  posts_overview_path do %>
+    <ul><div class="btn0">部活動概要</div></ul>
+    <% end %>
+    <%= link_to  posts_kojin_path do %>
+    <ul><div class="btn1">個人戦</div></ul>
+    <% end %>
+    <%= link_to  posts_dantai_path do %>
+    <ul><div class="btn2">団体戦</div></ul>
+    <% end %>
+    <%= link_to  posts_event_path do %>
+    <ul><div class="btn3">イベント</div></ul>
+    <% end %>
+    <%= link_to  posts_infomation_path do %>
+    <ul><div class="btn4">その他の情報</div></ul>
+    <% end %>
+   </div>
+  </div>
+
+
+
+
+  
+    
+   </div>
+  <main>
+  <%= yield %>
+  </main>
+  <footer>
+  <div class="header-list">
+  <ul>
+    
+     <% if user_signed_in? %>
+        <li><%= link_to "新規投稿", new_tweet_path %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "ログイン", new_user_session_path %></li>
+      <% end %>
+  </ul>
+  </div>
+
+
+  </footer>
+</body>
 </html>

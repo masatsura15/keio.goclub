@@ -1,33 +1,32 @@
-<h1>(自分の題名)</h1>
-<h3>新規投稿ページ</h3>
+<h1>新規投稿ページ</h1>
 <%= form_for @tweet do |f| %>
 
   <div class="field">
-    <%= f.label :タイトル %>
+    <%= f.label :タイトル（大見出し） %>
     <%= f.text_field :name, :size => 30 %>
   </div>
 
   <div class="field">
-  <%= f.label :結果 %>
+  <%= f.label :小見出し %>
   <%= f.text_field :goal, :size => 30 %>
 </div>
 
   <div class="field">
-    <%= f.label :タイトル  %>
+    <%= f.label :日時  %>
     <%= f.text_area :title, :size => "30x2" %>
   </div>
 
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label :写真 %>
     <%= f.file_field :image %>
   </div>
 
   <div class="field">
-  <%= f.label :感想  %>
+  <%= f.label :本文  %>
   <%= f.text_area :about, :size => "30x2" %>
 </div>
 
-    <%= f.select :category, [["個人戦", "kojin"], ["団体戦", "dantai"], ["その他のイベント", "event"]], include_blank: "どの投稿？" %>
+    <%= f.select :category, [["部活動概要", "overview"], ["個人戦", "kojin"], ["団体戦", "dantai"], ["イベント", "event"], ["その他の情報", "infomation"]], include_blank: "どの投稿？" %>
     
 
   <%= f.submit "投稿する" %>

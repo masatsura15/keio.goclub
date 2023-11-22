@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
-  before_action :authenticate_user! , except: :index
+  before_action :authenticate_user! , except: [:index, :kojin, :create, :dantai, :event, :show, :overview, :infomation]
+
   def index
         @tweets = Tweet.all
     end
@@ -19,7 +20,7 @@ class TweetsController < ApplicationController
       end
       
       def show
-        @tweet = Tweet.find(params[:id])
+        @tweets = Tweet.find(params[:id])
       end
 
       def edit
@@ -41,16 +42,26 @@ class TweetsController < ApplicationController
         redirect_to action: :index
       end
 
-      def kojin
+      def overview
         @tweets = Tweet.all
       end    
+
+      def kojin
+        @tweets = Tweet.all
+      end
+
       def dantai
         @tweets = Tweet.all
       end
-    
+          
       def event
         @tweets = Tweet.all
       end
+
+      def infomation
+        @tweets = Tweet.all
+      end
+      
       private
       def tweet_params
         params.require(:tweet).permit(:name, :genre, :title, :about, :goal, :category, :image)

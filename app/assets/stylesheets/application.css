@@ -13,3 +13,330 @@
  *= require_tree .
  *= require_self
  */
+
+
+ * {
+    padding: 0;
+    margin: 0;
+  }
+
+.gasshuku{
+    text-align: center;
+    margin-top: 30px;
+}
+
+  body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+
+      
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        background-image: url("./image.homepage");
+        width: 100%;
+        height: 2000px;
+    
+  }
+  header {
+    background-color: #0b0b0b;
+    height: 80px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-right: 0%;
+  }
+  header a {
+    color: white; 
+    text-decoration: none; 
+  }
+  header h1 {
+    color: white;
+    margin-left: 20px;
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  header ul {
+    display: flex;
+  }
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  }
+ 
+  footer {
+    color: rgb(0, 0, 0);
+    height: 30px;
+    background-color: #000000;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: flex-end;
+  }
+
+  .btn0 {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    
+}
+.btn0 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+  .btn1 {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    
+}
+.btn1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn2  {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+   }
+
+.btn2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn3  {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn3 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn4  {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn4 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.masa {
+    background-color: #b1b1b1;
+    height: 50px;
+    width: 100%;
+    margin-right: 0%;
+  }
+
+  .masa2{
+    display: flex;
+    gap: 50px;
+    margin-left:100px
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .SNS{   
+    background-color: #a0d8ef;
+    margin-right: 60px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    height: 800px;
+    border-radius: 100px;
+    text-align: center;
+  }
+
+  .SNS0{   
+    background-color: #ffffff;
+    margin-right: 60px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    height: 800px;
+    border-radius: 100px;
+    text-align: center;
+  }
+
+  .sns2{
+    display:flex;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: -300;
+  }
+
+  .indextext{
+    padding-top: 10px;
+    margin-left: -1000px;
+    text-decoration:underline double black;
+    text-underline-offset:0.25em;
+    font-size: 26px;
+}
+ 
+
+  .line{
+    margin-left: 100px;
+    width: 1000px;
+    height: 100px;
+  }
+
+  .line-btn{
+    width: 200px;
+    margin-left: 100px
+  }
+
+  .line-QR{
+    width: 600px;
+    height: 600px;
+  }
+
+  .twitter{
+    margin-left: 70px;
+    margin-top: none;
+    margin-bottom: 50px;
+    width: 1000px;
+    overflow-y: scroll;
+    height: 600px;
+}
+
+.headline{
+    white-space: nowrap;
+}
+
+.overviewtext{
+    padding-top: 10px;
+    margin-left: -1000px;
+    text-decoration:underline double black;
+    text-underline-offset:0.25em;
+    font-size: 26px;
+}
+
+.activity{   
+    background-color: #eedcb3;
+    height: 600px;
+    margin-right: 60px;
+    margin-left: 100px;
+    margin-bottom: 60px;
+    border-radius: 100px;
+    text-align: center;
+  }
+
+
+.bushitsu{
+    display:flex;
+    margin-left: 400px;
+    gap: 30px;
+}
+
+.map{
+    margin-left: -300px;
+}
+
+.club_room{
+  gap: 30px;
+}
+
+.practice{
+  display:flex;
+  gap: 200px;
+}
+
+.practice1{
+  display:flex;
+  gap: 50px;
+  margin-left: 100px;
+}
+
+.okura{
+  width: 400px;
+  margin-left: 100px;
+}
+
+.overviewtext0{
+  padding-top: 10px;
+  margin-left: -750px;
+  text-decoration:underline double black;
+  text-underline-offset:0.25em;
+  font-size: 26px;
+}
+
+
+.first{
+  width: 400px;
+}
+
+.sns1{
+    margin-top: 50px;
+}
+
+.magazine{
+    display: flex;
+    margin-left: 90px;
+}
+
+.overtext{
+  text-align: left;
+}
+
+  .activity0{   
+  background-color: #eedcb3;
+  height: 550px;
+  margin-right: 60px;
+  margin-left: 100px;
+  margin-bottom: 60px;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.magazine0{
+  display: flex;
+  gap: 50px;
+}
+
+.info{   
+  background-color: #eedcb3;
+  height: 600px;
+  margin-right: 60px;
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  border-radius: 100px;
+  text-align: center;
+}

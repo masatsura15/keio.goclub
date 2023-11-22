@@ -1,12 +1,23 @@
-<h1>その他のイベント</h1>
-<% @tweets.each do |t| %>
-    <% if t.category == "event" %>  #ここがポイント！ categoryカラムにhadakadebanezumiと格納されているものだけを表示している！
-      <%= t.name %>
-      <%= t.title %>
-      <%= image_tag t.image_url, size: "250x200" if t.image? %>
-      <%= t.about %>
-      <%= t.goal %>
-    <% end %>
-  <% end %>
+ <div class="title">
+  <h2>イベント</h2>
+ </div>
 
-  <%= link_to "一覧に戻る", tweets_path %>
+ <div class="article">
+<% @tweets.each do |t| %>
+    <% if t.category == "event" %> 
+    <h2>
+    <a class="linkcolor">
+
+    <ul>  
+    <li>
+    <%= link_to tweet_path(t.id) do %>
+    <%= t.name %>
+    <%= t.goal %>
+    </a>
+
+    </h2>
+    <% end %>    </li>
+     <% end %>
+     </ul>
+  <% end %>
+  </div>
